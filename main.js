@@ -24,7 +24,7 @@ async function getCats() {
         `
           <article>
           <img src=${el.url} />
-          <img class="favorite" src="./favorite.png" onclick="saveFavoriteCat('${el.id}')" />
+          <img class="favorite" src="./img/favorite.png" onclick="saveFavoriteCat('${el.id}')" />
         </article>
         `
       );
@@ -50,9 +50,9 @@ async function getFavorites() {
       $favorite.insertAdjacentHTML(
         "afterbegin",
         `
-            <article>
+            <article class="article_delete_favorite">
             <img src=${el.image.url} />
-            <img class="delete" src="./delete.png"  onclick="deleteFavoriteCat('${el.id}')"/>
+            <img class="delete" src="./img/delete.png"  onclick="deleteFavoriteCat('${el.id}')"/>
             </article>
           `
       );
